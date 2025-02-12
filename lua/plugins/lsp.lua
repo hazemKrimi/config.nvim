@@ -169,6 +169,7 @@ return {
       sqlls = {},
       jsonls = {},
       yamlls = {},
+      gopls = {},
       lua_ls = {
         -- cmd = {...},
         -- filetypes = { ...},

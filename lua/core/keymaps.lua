@@ -5,9 +5,10 @@ vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
 local opts = { noremap = true, silent = true }
 
--- delete single character without copying into register
+-- Delete single character without copying into register
 vim.keymap.set('n', 'x', '"_x', opts)
 
+-- Improvement to up and down movements
 vim.keymap.set('n', '<C-d>', '<C-d>zz', opts)
 vim.keymap.set('n', '<C-u>', '<C-u>zz', opts)
 
@@ -18,10 +19,10 @@ vim.keymap.set('n', '<Left>', ':vertical resize -2<CR>', opts)
 vim.keymap.set('n', '<Right>', ':vertical resize +2<CR>', opts)
 
 -- Window management
-vim.keymap.set('n', '<leader>sv', '<C-w>v', opts) -- split window vertically
-vim.keymap.set('n', '<leader>sh', '<C-w>s', opts) -- split window horizontally
-vim.keymap.set('n', '<leader>se', '<C-w>=', opts) -- make split windows equal width & height
-vim.keymap.set('n', '<leader>xs', ':close<CR>', opts) -- close current split window
+vim.keymap.set('n', '<leader>vs', '<C-w>v', { desc = 'Split window vertically' }) -- split window vertically
+vim.keymap.set('n', '<leader>hs', '<C-w>s', { desc = 'Split window horizontally' }) -- split window horizontally
+vim.keymap.set('n', '<leader>es', '<C-w>=', { desc = 'Equalize splits' }) -- make split windows equal width & height
+vim.keymap.set('n', '<leader>xs', ':close<CR>', { desc = 'Close split' }) -- close current split window
 
 -- Navigate between splits
 vim.keymap.set('n', '<C-k>', ':wincmd k<CR>', opts)
