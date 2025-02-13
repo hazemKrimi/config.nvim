@@ -5,9 +5,6 @@ vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
 local opts = { noremap = true, silent = true }
 
--- Delete single character without copying into register
-vim.keymap.set('n', 'x', '"_x', opts)
-
 -- Improvement to up and down movements
 vim.keymap.set('n', '<C-d>', '<C-d>zz', opts)
 vim.keymap.set('n', '<C-u>', '<C-u>zz', opts)
@@ -36,9 +33,6 @@ vim.keymap.set('n', '<leader>lw', '<cmd>set wrap!<CR>', opts)
 -- Stay in indent mode
 vim.keymap.set('v', '<', '<gv', opts)
 vim.keymap.set('v', '>', '>gv', opts)
-
--- Keep last yanked when pasting
-vim.keymap.set('v', 'p', '"_dP', opts)
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
