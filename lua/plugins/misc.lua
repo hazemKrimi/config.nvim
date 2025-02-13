@@ -37,4 +37,12 @@ return {
       require('colorizer').setup()
     end,
   },
+  { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
+  {
+    'github/copilot.vim',
+    config = function()
+      vim.keymap.set('n', '<leader>ec', ':Copilot enable<CR>', { desc = 'Enable Copilot', noremap = false, silent = true })
+      vim.keymap.set('n', '<leader>dc', ':Copilot disable<CR>', { desc = 'Disable Copilot', noremap = false, silent = true })
+    end,
+  },
 }
