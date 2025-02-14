@@ -17,6 +17,11 @@ return {
     'folke/which-key.nvim',
   },
   {
+    'pmizio/typescript-tools.nvim',
+    dependencies = { 'nvim-lua/plenary.nvim', 'neovim/nvim-lspconfig' },
+    opts = {},
+  },
+  {
     -- Autoclose parentheses, brackets, quotes, etc.
     'windwp/nvim-autopairs',
     event = 'InsertEnter',
