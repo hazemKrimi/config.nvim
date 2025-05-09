@@ -19,6 +19,11 @@ return {
         command = 'node',
         args = { os.getenv 'HOME' .. '/.local/share/nvim/mason/packages/chrome-debug-adapter/out/src/chromeDebug.js' },
       }
+      dap.adapters.delve = {
+        type = 'server',
+        host = '127.0.0.1',
+        port = 38697,
+      }
 
       dap.configurations.javascriptreact = {
         {
@@ -70,6 +75,15 @@ return {
               end)
             end)
           end,
+        },
+      }
+      dap.configurations.go = {
+        {
+          type = 'delve',
+          name = 'Debug',
+          mode = 'remote',
+          request = 'attach',
+          program = '${file}',
         },
       }
 
