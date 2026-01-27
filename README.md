@@ -14,6 +14,8 @@ sudo apt update
 sudo apt install make gcc ripgrep unzip git xclip neovim
 ```
 
+3. Optionally install a [Nerd Font](https://www.nerdfonts.com/).
+
 ## References
 
 My config is based on [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim) but I customized it following [Henry Misc's video](https://www.youtube.com/watch?v=KYDG3AHgYEs&t=1229s).
