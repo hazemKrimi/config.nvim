@@ -52,7 +52,6 @@ vim.o.updatetime = 300
 vim.o.timeoutlen = 500
 vim.o.ttimeoutlen = 0
 vim.o.autoread = true
-vim.o.autowrite = false
 
 -- Behavior
 
