@@ -2,6 +2,7 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.wo.number = true
 vim.o.winborder = "single"
+vim.o.autoread = true
 vim.o.relativenumber = true
 vim.o.clipboard = 'unnamedplus'
 vim.o.wrap = false
