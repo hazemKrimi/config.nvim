@@ -29,18 +29,4 @@ return {
     opts = { signs = false },
   },
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
-  {
-    'github/copilot.vim',
-    config = function()
-      vim.keymap.set('n', '<leader>ec', ':Copilot enable<CR>', { desc = 'Enable Copilot', noremap = false, silent = true })
-      vim.keymap.set('n', '<leader>dc', ':Copilot disable<CR>', { desc = 'Disable Copilot', noremap = false, silent = true })
-      vim.keymap.set('i', '<C-g>', 'copilot#Accept("\\<CR>")', {
-        expr = true,
-        replace_keycodes = false,
-        silent = true,
-        noremap = true,
-      })
-      vim.g.copilot_no_tab_map = true
-    end,
-  },
 }

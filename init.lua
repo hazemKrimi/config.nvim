@@ -1,6 +1,6 @@
-require 'config.options'
-require 'config.keymaps'
-require 'config.autocommands'
+require 'options'
+require 'keymaps'
+require 'autocommands'
 
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 
@@ -15,7 +15,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup {
-  require 'plugins.alpha',
   require 'plugins.colorscheme',
   require 'plugins.neo-tree',
   require 'plugins.bufferline',
@@ -23,7 +22,6 @@ require('lazy').setup {
   require 'plugins.treesitter',
   require 'plugins.telescope',
   require 'plugins.lsp',
-  require 'plugins.dap',
   require 'plugins.formatting',
   require 'plugins.autocompletion',
   require 'plugins.gitsigns',
