@@ -6,13 +6,7 @@ This repo contains my custom NeoVim config for software development.
 
 1. Install [Lua](https://www.lua.org/download.html) if you do not have it already.
 
-2. Install NeoVim following the kickstart guide:
-
-```
-sudo add-apt-repository ppa:neovim-ppa/unstable -y
-sudo apt update
-sudo apt install make gcc ripgrep unzip git xclip neovim
-```
+2. Install NeoVim following the [Installation docs](https://neovim.io/doc/install/):
 
 3. Optionally install a [Nerd Font](https://www.nerdfonts.com/).
 
