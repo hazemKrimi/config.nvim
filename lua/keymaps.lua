@@ -6,6 +6,11 @@ vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
 local opts = { noremap = true, silent = true }
 
+-- Color Theme
+
+vim.keymap.set("n", "<leader>lm", ":colorscheme kanagawa-lotus<CR>", { desc = 'Switch to light mode' })
+vim.keymap.set("n", "<leader>dm", ":colorscheme kanagawa-dragon<CR>", { desc = 'Switch to dark mode' })
+
 -- Movement
 
 vim.keymap.set("n", "n", "nzzzv", { desc = "Next search result (centered)" })
@@ -36,6 +41,7 @@ vim.keymap.set('n', '<Right>', ':vertical resize +2<CR>', opts)
 
 vim.keymap.set("n", "<leader>bn", ":bnext<CR>", { desc = "Next buffer" })
 vim.keymap.set("n", "<leader>bp", ":bprevious<CR>", { desc = "Previous buffer" })
+vim.keymap.set("n", "<leader>bd", ":bd<CR>", { desc = "Delete buffer" })
 
 -- Diagnostic keymaps
 
